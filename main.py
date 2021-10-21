@@ -29,8 +29,8 @@ for key, value in server_name_list.items():
 
     col1, col2, col3 = st.columns(3)
 
-    col1.metric('Total signed players', server_status.players.max, delta='Above 500 players')
-    col2.metric('Players online', server_status.players.online, delta=f'{drop}% of members currently active')
+    col1.metric('Total signed players', server_status.players.max, delta='> 500 players')
+    col2.metric('Players online', server_status.players.online, delta=f'{drop}% of members are online')
     col3.metric('Ping', server_status.latency, delta='Over 100ms', delta_color='inverse')
 
     st.write(f'For more info about **{key}** server, go to [{value}]({key})')
