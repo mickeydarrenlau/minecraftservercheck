@@ -1,11 +1,21 @@
 import streamlit as st
 from mcstatus import MinecraftServer
 
-st.image('Minecraft-server-check.png')
 
-st.title("""
-Get info about the largest minecraft servers on Earth :earth_africa:
-""")
+cols1, cols2, cols3 = st.columns([1,6,1])
+
+with cols1:
+    st.write("")
+
+with cols2:
+    st.image("Minecraft-server-check.png")
+    st.title("""
+            Get info about the largest minecraft servers on Earth :earth_africa:
+            """)
+
+with cols3:
+    st.write("")
+    
 
 server_name_list = {'hub.manacube.net':'https://manacube.com/',
                     'hub.lemoncloud.net':'https://lemoncloud.net',
