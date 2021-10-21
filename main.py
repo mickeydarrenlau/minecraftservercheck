@@ -43,4 +43,4 @@ for key, value in server_name_list.items():
     col2.metric('Players currently online', server_status.players.online, delta=f'{drop}% of members')
     col3.metric('Ping', server_status.latency, delta='Over 100ms', delta_color='inverse')
 
-    st.write(f'For more info about **{key}** server, go to [{value}]({key})')
+    st.markdown(f'For more info about **{key}** server, go to {value}', unsafe_allow_html=True)
