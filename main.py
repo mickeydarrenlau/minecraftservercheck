@@ -1,6 +1,8 @@
 import streamlit as st
 from mcstatus import MinecraftServer
 
+st.set_page_config('Minecraft server status',':earth_africa:')
+
 cols1, cols2, cols3 = st.columns([1, 6, 1])
 
 with cols1:
