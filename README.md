@@ -32,6 +32,9 @@ ____
   
   
 ### Improvements made to date
-* Added a favicon to the web app (:earth_africa:)
+* Added a favicon to the web app
+         ![minecraft server](https://user-images.githubusercontent.com/92593501/138512954-d273ae14-eef6-44c9-b87a-1562bcdbc2d7.png)
+
+
 * Added a name to the web app (Minecraft Server Status)
 * Added 1 more server to the list. [Bedwars.games](https://blockdrop.org/index.php)
