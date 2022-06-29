@@ -65,5 +65,5 @@ for key, value in server_name_list.items():
             col3.metric('Ping', round(server_status.latency), delta='Ping under 300ms')
 
         st.markdown(f'For more info about **{key}** server, go to {value}', unsafe_allow_html=True)
-   except:
+    except:
         pass
