@@ -8,6 +8,6 @@ headless = true\n\
 enableXsrfProtection=false\n\
 \n\
 [logger]\n\
-level='verbose'\n\
+level='debug'\n\
 \n\
 " > ~/.streamlit/config.toml
