@@ -1,7 +1,7 @@
 import streamlit as st
 from mcstatus import MinecraftServer
 
-st.set_page_config('Minecraft server status',':earth_africa:')
+st.set_page_config('DarrenMC Network Status',':earth_africa:')
 
 st.markdown(""" <style>
 #MainMenu {visibility: hidden;}
@@ -14,15 +14,14 @@ with cols1:
     st.write("")
 
 with cols2:
-    st.image("Minecraft-server-check.png")
     st.title("""
-            Get info about all Minecraft server that DarrenMC hosts :earth_africa:
+            DarrenMC Network Status
             """)
 
 with cols3:
     st.write("")
 
-server_name_list = {'mc.darren.ee.eu.org': 'Main Hub'}
+server_name_list = {'mc.darren.ee.eu.org': "Main Hub"}
 
 for key, value in server_name_list.items():
     try:
@@ -30,8 +29,7 @@ for key, value in server_name_list.items():
         server_status = server.status()
 
         st.write('----------------------')
-
-        st.title(f'{key} server')
+        st.title(f'{value} server')
 
         # Calculate percentage of online players against total joined players
         col1, col2, col3 = st.columns(3)
@@ -55,7 +53,5 @@ for key, value in server_name_list.items():
             col3.metric('Ping', round(server_status.latency), delta='Ping over 300ms', delta_color='inverse')
         else:
             col3.metric('Ping', round(server_status.latency), delta='Ping under 300ms')
-
-        st.markdown(f'{value}', unsafe_allow_html=True)
     except:
         pass
