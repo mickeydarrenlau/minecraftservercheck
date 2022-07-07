@@ -38,15 +38,14 @@ for key, value in server_name_list.items():
 
         # Filtering total players
         if server_status.players.max > 1000:
-            col1.metric('Total signed players', server_status.players.max, delta='> 1000 joined players')
+            col1.metric('Total signed players', server_status.players.max, delta='')
         else:
-            col1.metric(f'Total signed players', server_status.players.max, delta=f'< 1000 joined players',
-                        delta_color='inverse')
+            col1.metric(f'Total signed players', server_status.players.max, delta=f'')
 
         # Filtering active/currently online players
         drop = round((int(server_status.players.online) / (int(server_status.players.max)) * 100))
-        if drop > 50:
-            col2.metric('Players online', f'{drop}%', delta=f'< half of members online', delta_color='inverse')
+        if drop > 10:
+            col2.metric('Players online', f'{drop}%', delta=f'')
         else:
             col2.metric('Players online', f'{drop}%', delta=f'> half of members online')
 
