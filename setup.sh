@@ -5,9 +5,9 @@ echo "\
 port = $PORT\n\
 enableCORS = false\n\
 headless = true\n\
-server.enableXsrfProtection=false\n\
+enableXsrfProtection=false\n\
 \n\
-[logging]\n\
+[logger]\n\
 level='verbose'\n\
 \n\
 " > ~/.streamlit/config.toml
