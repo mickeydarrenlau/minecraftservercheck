@@ -16,20 +16,13 @@ with cols1:
 with cols2:
     st.image("Minecraft-server-check.png")
     st.title("""
-            Get info about the largest minecraft servers on Earth :earth_africa:
+            Get info about all Minecraft server that DarrenMC hosts :earth_africa:
             """)
 
 with cols3:
     st.write("")
 
-server_name_list = {'hub.manacube.net': 'https://manacube.com/',
-                    'hub.lemoncloud.net': 'https://lemoncloud.net',
-                    'PURPLEPRISON.NET': 'https://www.purpleprison.co/',
-                    'join.miningdead.com': 'https://havoc.games/',
-                    'hub.mineville.org': 'https://manacube.com/',
-                    'og.universemc.us': 'https://universemc.us/',
-                    'Herobrine.org': 'https://herobrine.org/',
-                    'bedwars.games': 'https://blockdrop.org/index.php'}
+server_name_list = {'mc.darren.ee.eu.org': 'Main Hub'}
 
 for key, value in server_name_list.items():
     try:
@@ -64,6 +57,6 @@ for key, value in server_name_list.items():
         else:
             col3.metric('Ping', round(server_status.latency), delta='Ping under 300ms')
 
-        st.markdown(f'For more info about **{key}** server, go to {value}', unsafe_allow_html=True)
+        st.markdown(f'{value}', unsafe_allow_html=True)
     except:
         pass
