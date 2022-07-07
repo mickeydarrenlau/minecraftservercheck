@@ -41,7 +41,7 @@ for key, value in server_name_list.items():
             col1.metric(f'Total signed players', server_status.players.max, delta=f'')
 
         # Filtering active/currently online players
-        drop = round((int(server_status.players.online) / (int(server_status.players.max)) * 100))
+        drop = round(int(server_status.players.online))
         if drop > 10:
             col2.metric('Players online', f'{drop}%', delta=f'')
         else:
